@@ -17,16 +17,16 @@
 ## ⚡ Quick Start (3 Steps)
 
 ```python
-# Step 1: QApplication 생성 직후 테마 로드
+# Step 1: Load the theme immediately after creating QApplication
 from utils.theme_manager import load_theme, get_theme
 app = QApplication(sys.argv)
 load_theme(app, "themes/default.json")
 
-# Step 2: 테마 값 사용
+# Step 2: Using theme values
 theme = get_theme()
 primary_color = theme.get("colors.brand.primary", "#007bff")
 
-# Step 3: Property Variant 적용
+# Step 3: Applying Property Variant
 button = QPushButton("확인")
 button.setProperty("variant", "primary")
 ```
@@ -154,10 +154,10 @@ QPushButton[variant="danger"] {
 
 ### Python Usage
 ```python
-# Variant 설정
+# Variant settings
 button.setProperty("variant", "primary")
 
-# 동적 변경 시 스타일 갱신 필요
+# Style update required for dynamic changes
 button.setProperty("variant", "danger")
 button.style().unpolish(button)
 button.style().polish(button)
@@ -169,13 +169,13 @@ button.style().polish(button)
 
 ### GUI Analyzer (Static Analysis)
 ```bash
-# 단일 파일 분석
+# Single file analysis
 python .claude/skills/pyqt-pyside-gui/tools/gui_analyzer.py path/to/file.py
 
-# 출력: HTML 리포트 생성
-# - 위젯 트리
-# - 이슈 목록 (size, visibility, layout, naming)
-# - Best Practices 체크리스트
+# Output: Generate HTML report
+# - Widget tree visualization
+# - Issue list (size, visibility, layout, naming)
+# - Best Practices checklist
 ```
 
 ### Debugging Workflow
@@ -333,5 +333,5 @@ color = theme.get("colors.brand.primary", "#007bff")  # provide default
 
 ---
 
-> **Full documentation reference:** `skill.md` (complete Korean guide)
+> **Full documentation reference:** `skill.md` (complete guide)
 
